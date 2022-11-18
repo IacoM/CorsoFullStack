@@ -1,0 +1,130 @@
+div {
+    font-size: 48px;
+    border: solid 1px yellowgreen;
+    background-color: gray;
+    color: yellowgreen;
+}
+section.calcolatrice {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(6, 80px) ;
+    grid-template-areas: 
+        "sopra sopra sopra sopra"
+        "più meno per diviso"
+        "sette otto nove uguale"
+        "quattro cinque sei uguale"
+        "uno due tre uguale"
+        "zero punto AC uguale"
+}
+
+#sopra {
+    grid-area: sopra;
+    text-align: right;
+    font-size: 52px;
+    padding-right: 15px;
+    padding-top: 5px;
+    background-color: rgb(39, 39, 39);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#più {
+    grid-area: più;
+    text-align: center;
+    padding-top: 10px;
+    background-color: lightgray;
+}
+
+#meno {
+    grid-area: meno;
+    text-align: center;
+    padding-top: 10px;
+    background-color: lightgray;
+}
+
+#per {
+    grid-area: per;
+    text-align: center;
+    padding-top: 10px;
+    background-color: lightgray;
+}
+
+#diviso {
+    grid-area: diviso;
+    text-align: center;
+    padding-top: 10px;
+    background-color: lightgray;
+}
+
+#sette {
+    grid-area: sette;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#otto {
+    grid-area: otto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#nove {
+    grid-area: nove;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#uguale {
+    grid-area: uguale;
+    text-align: center;
+    padding-top: 135px;
+    background-color: rgb(161, 3, 3);
+    border-bottom-right-radius: 15px;
+}
+
+#quattro {
+    grid-area: quattro;
+    text-align: center;
+    padding-top: 10px;
+}
+#cinque {
+    grid-area: cinque;
+    text-align: center;
+    padding-top: 10px;
+}
+#sei {
+    grid-area: sei;
+    text-align: center;
+    padding-top: 10px;
+}
+#uno {
+    grid-area: uno;
+    text-align: center;
+    padding-top: 10px;
+}
+#due {
+    grid-area: due;
+    text-align: center;
+    padding-top: 10px;
+}
+#tre {
+    grid-area: tre;
+    text-align: center;
+    padding-top: 10px;
+}
+#zero {
+    grid-area: zero;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-left-radius: 15px;
+}
+#punto {
+    grid-area: punto;
+    text-align: center;
+    padding-top: 5px;
+}
+#AC {
+    grid-area: AC;
+    text-align: center;
+    padding-top: 10px;
+}
