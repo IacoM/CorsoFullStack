@@ -1,0 +1,39 @@
+section.card {
+    width: 250px;
+    height: 510px;
+    border: solid 2px lightgray;
+    border-radius: 5px;
+}
+
+#paragraph {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: solid 1px lightgray;
+}
+
+h3 {
+    padding-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 136, 255);
+}
+
+a:visited {
+    color: purple;
+}
+
+#links {
+    padding-top: 10px;
+}
+
+#button {
+    padding-top: 10px;
+    border-top: solid 1px lightgray;
+}
+
+#likelist {
+    padding-bottom: 10px;
+    border-bottom: solid 1px lightgray;
+}
