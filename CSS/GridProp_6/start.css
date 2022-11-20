@@ -1,0 +1,42 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 20em);
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas: 
+    'green green green'
+    'yellow red blue'
+    'orange orange blue';
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+li {
+    width: 70%;
+    height: 70%;
+}
+
+#green {
+    grid-area: green;
+}
+
+#yellow {
+    grid-area: yellow;
+}
+
+#orange {
+    grid-area: orange;
+}
+
+#red {
+    grid-area: red;
+}
+
+#blue {
+    grid-area: blue;
+}
