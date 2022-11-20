@@ -1,0 +1,100 @@
+body {
+    color: lightgray;
+    font-family: 'Roboto', sans-serif;
+}
+nav {
+    background-color: rgb(23, 26, 23);
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 3px;
+}
+a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.hlink {
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left: 12px;
+}
+
+.slink {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.navbar {
+    font-weight: bold;
+    padding-top: 2px;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+select {
+    background-color: rgb(23, 26, 23);
+    border-color: rgb(23, 26, 23);
+    color: rgb(158, 157, 157);
+    padding-bottom: 3px;
+}
+
+button {
+    border: none;
+    background: none;
+    color: rgba(211, 211, 211, 0.365);
+    padding: 5px;
+}
+
+#submit {
+    color: green;
+    border: solid 1px green;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+#submit:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.searchbar {
+    padding-top: 2px;
+    padding-left: 40px;
+}
+
+.dropdown {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+input[type=text] {
+    height: 21px;
+    border-radius: 2px;
+    border: rgb(23, 26, 23)
+}
+
+#burger {
+    padding-left: 12px;
+    padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+    span {
+        display: none;
+    }
+    select {
+        display: none;
+    }
+    .navbar {
+        display: initial;
+    }
+}
+
+@media (min-width: 768px) {
+    #burger {
+        display: none;
+    }
+}
