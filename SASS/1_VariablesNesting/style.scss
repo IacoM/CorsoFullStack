@@ -1,0 +1,31 @@
+$sass-red: red;
+$sass-green: green;
+$sass-blue: blue;
+$sass-green-border: solid 1px green;
+
+.container {
+    border: solid 1px $sass-red;
+}
+
+h1 {
+    text-align: center;
+    color: $sass-green;
+    text-decoration: underline $sass-blue;
+    text-decoration-thickness: 1px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 10px;
+    article {
+        border: $sass-green-border;
+        color: $sass-red;
+        padding: 5px;
+        text-align: center;
+        &:nth-of-type(odd) {
+            color: $sass-blue;
+        }
+    }
+}
+    

@@ -1,0 +1,27 @@
+.container {
+  border: solid 1px red;
+}
+
+h1 {
+  text-align: center;
+  color: green;
+  text-decoration: underline blue;
+  text-decoration-thickness: 1px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px;
+}
+section article {
+  border: solid 1px green;
+  color: red;
+  padding: 5px;
+  text-align: center;
+}
+section article:nth-of-type(odd) {
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
