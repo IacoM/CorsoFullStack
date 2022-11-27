@@ -1,0 +1,59 @@
+.container {
+  border: solid 0.0625rem red;
+}
+
+h1 {
+  text-align: center;
+  color: green;
+  text-decoration: underline blue;
+  text-decoration-thickness: 0.0625rem;
+}
+
+section.up {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0.625rem;
+}
+
+.first {
+  border: solid 1px green;
+  color: blue;
+  padding: 0.3125rem;
+  text-align: center;
+}
+
+.second {
+  border: solid 1px green;
+  color: red;
+  padding: 0.3125rem;
+  text-align: center;
+}
+
+.third {
+  border: solid 1px green;
+  color: blue;
+  padding: 0.3125rem;
+  text-align: center;
+}
+
+.fourth {
+  border: solid 1px green;
+  color: red;
+  padding: 0.3125rem;
+  text-align: center;
+}
+
+.fifth {
+  border: solid 1px blue;
+  color: green;
+  padding: 0.3125rem;
+  text-align: center;
+  margin: 0.625rem;
+  height: 5rem;
+  font-size: 1.25rem;
+}
+.fifth p {
+  padding-top: 0.625rem;
+}
+
+/*# sourceMappingURL=style.css.map */
