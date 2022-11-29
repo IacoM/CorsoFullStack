@@ -1,0 +1,104 @@
+@use "sass:color";
+$sass-red: red;
+$sass-green: green;
+$sass-blue: blue;
+$sass-green-border: solid 1px green;
+$sass-blue-border: solid 1px blue;
+@function px-to-rem($width) {
+
+    @return calc($width / 16) + rem;
+}
+
+.container {
+    border: solid px-to-rem(1) $sass-red;
+}
+
+%text {
+    text-align: center;
+    color: $sass-green;
+    text-decoration: underline $sass-blue;
+    text-decoration-thickness: px-to-rem(1);
+}
+h1 {
+    @extend %text;
+}
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+h2 {
+    @extend %text;
+    border: solid 1px red;
+    padding: 1rem;
+    display: inline-block;
+}
+
+section.up {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: px-to-rem(10);
+}
+
+@mixin article-color($color, $border) {
+    border: $border;
+    color: $color;
+    padding: px-to-rem(5);
+    text-align: center;
+    
+}
+
+.first {
+    @include article-color($color:$sass-blue, $border:$sass-green-border);
+}
+.second {
+    @include article-color($color:$sass-red, $border:$sass-green-border);
+}
+.third {
+    @include article-color($color:$sass-blue, $border:$sass-green-border);
+}
+.fourth {
+    @include article-color($color:$sass-red, $border:$sass-green-border);
+}
+.fifth {
+    @include article-color($color:$sass-green, $border:$sass-blue-border);
+    margin: px-to-rem(10);
+    height: px-to-rem(80);
+    font-size: px-to-rem(20);
+    p {
+        padding-top: px-to-rem(10);
+    }
+}
+
+
+
+.middle {
+    display: flex;
+    justify-content: space-around;
+    margin-left: px-to-rem(5);
+    margin-left: px-to-rem(5);
+    div {
+        width: px-to-rem(45);
+        height: px-to-rem(45);
+        border: solid 1px $sass-red;
+        @for $bg-index from 1 through 20 {
+            $sass-color: black;
+            $sass-color: color.adjust($sass-color, $lightness: +5% * $bg-index);
+            $bg-color: color.invert($sass-color);
+            @if $bg-index == 10 {
+                $bg-color: blue;
+                $sass-color: red;
+            }
+            &:nth-child(#{$bg-index}){
+                color: $sass-color;
+                background-color: $bg-color;
+            }
+        }
+    }
+}
+
+$font-size: 1rem, 2rem, 3rem;
+@each $size in $font-size {
+    .fs-#{$size}{
+        font-size: $size;
+    }
+}
