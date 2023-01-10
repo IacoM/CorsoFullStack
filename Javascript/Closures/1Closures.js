@@ -3,6 +3,6 @@ function printName(){
     function inner(){
         return helloName;
     }
-    return inner();
+    return inner;
 }
-console.log(printName());
+console.log(printName()());
