@@ -1,12 +1,8 @@
-function uncompletedNotes(notes) {
-  //   let filtro = () => { 
-  //     console.log(notes.filter((fatto)=> Object.valueOf(fatto.todos.id)));
-  //   };
-  // console.log(notes.forEach(filtro));
-  // notes.forEach((fatto)=> fatto.todos);
-  // return notes.filter((nfatto)=> nfatto.done);
-  notes.forEach(todos);
-  console.log(notes.filter, tutti((fatto)=> Object.valueOf(fatto.todos == false)));
+function uncompletedNotes(notes) { 
+  
+  const notes2 = []
+  notes.forEach((note)=> notes2.push(note.todos.filter((todo)=> todo.done == false))); 
+  return notes2;
 };
 
 const notes = [
@@ -59,4 +55,4 @@ const notes = [
   },
 ];
 
-uncompletedNotes(notes);
+console.log(uncompletedNotes(notes));
