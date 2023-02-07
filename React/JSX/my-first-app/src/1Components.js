@@ -1,10 +1,10 @@
-import React from 'react'
+// import React from 'react'
 
-export class Hello extends React.Component {
-    render() {
-        return <h1>Hello World!</h1>
-    }
-}
+// export class Hello extends React.Component {
+//     render() {
+//         return <h1>Hello World!</h1>
+//     }
+// }
 
-root.render(<Hello />)
+// root.render(<Hello />)
 
