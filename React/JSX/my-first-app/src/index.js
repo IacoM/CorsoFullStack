@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import { App } from './2Components'
+import { App } from './AppComponent'
 
 const root = document.querySelector('#root')
 
