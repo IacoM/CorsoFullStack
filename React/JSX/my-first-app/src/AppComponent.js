@@ -1,12 +1,12 @@
 import React from "react";
-import { Welcome } from "./Props/5Props";
+import { Welcome } from "./ConditionalRendering/5ConditionalRendering";
 // import { Hello } from "./4Component";
 
 export class App extends React.Component {
     render(){
         return (
             <div>
-                <Welcome name="Geronimo" />
+                <Welcome name="John" age="17" />
             </div>
         )
     }
