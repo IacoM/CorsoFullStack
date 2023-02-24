@@ -30,6 +30,10 @@ export class Login extends React.Component {
     }
     
     render() {
+        const MyMegaStyle = {
+            backgrounColor: 'red'
+        }
+        
         return <div>
             <input name="username" placeholder="username" value={this.state.username} onChange={this.handleInputChange}></input>
             <input name="password" type="password" placeholder="password" value={this.state.password} onChange={this.handleInputChange}></input>
