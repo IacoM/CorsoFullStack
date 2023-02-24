@@ -5,6 +5,7 @@ import { Counter } from "./ComponentLifecycle/1ComponentLifecycle";
 import { ClickCounter } from "./Events/3Events";
 import { ClickTracker } from "./Events/3Events";
 import { Login} from "./Forms/4Forms";
+import { UncontrolledLogin } from "./Forms/6Forms";
 // import { Hello } from "./4Component";
 
 export class App extends React.Component {
@@ -15,6 +16,7 @@ export class App extends React.Component {
                 <ClickCounter />
                 <InteractiveWelcome />
                 <Login />
+                <UncontrolledLogin />
             </div>
         )
     }

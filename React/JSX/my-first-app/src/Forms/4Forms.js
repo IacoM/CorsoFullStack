@@ -35,12 +35,10 @@ export class Login extends React.Component {
             <input name="password" type="password" placeholder="password" value={this.state.password} onChange={this.handleInputChange}></input>
             <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.handleInputChange}></input>
             <button onClick={this.handleReset}>Reset</button>
-            <div>
             {this.state.username && this.state.password
                 ? <button onClick={this.onLogin}>Login</button>
                 : <button disabled>Login</button>
             }
-            </div>
         </div>
     }
 }
