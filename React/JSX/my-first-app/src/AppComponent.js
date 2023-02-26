@@ -2,9 +2,9 @@ import React from "react";
 // import { Welcome } from "./ConditionalRendering/5ConditionalRendering";
 import { InteractiveWelcome } from "./Forms/1Forms";
 import { Counter } from "./ComponentLifecycle/1ComponentLifecycle";
-import { ClickCounter } from "./Events/3Events";
+// import { ClickCounter } from "./Events/3Events";
 import { ClickTracker } from "./Events/3Events";
-import { Login} from "./Forms/4Forms";
+// import { Login} from "./Forms/4Forms";
 import { UncontrolledLogin } from "./Forms/6Forms";
 import { Colors } from "./LIsts/2Lists";
 import { TodoList } from "./LIsts/6Lists";
@@ -14,6 +14,8 @@ import { DisplayLanguage } from "./Context/2Context";
 
 import { Welcome } from "./FunctionComponent/1FunctionComponent";
 import { Sum } from "./FunctionComponent/3FunctionComponents";
+import { ClickCounter } from "./useState/1useState";
+import { Login } from "./useState/2useState";
 // import { Hello } from "./4Component";
 
 const items = [
@@ -48,7 +50,7 @@ export class App extends React.Component {
                         <div className="welcome">
                             <Welcome name="John" age="64"/>
                         </div>
-                        <ClickCounter />
+                        <ClickCounter initValue={13}/>
                         <InteractiveWelcome />
                         <Login />
                         <UncontrolledLogin />
