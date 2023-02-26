@@ -7,7 +7,10 @@ import { ClickTracker } from "./Events/3Events";
 import { Login} from "./Forms/4Forms";
 import { UncontrolledLogin } from "./Forms/6Forms";
 import { Colors } from "./LIsts/2Lists";
-import { TodoList } from "./LIsts/3Lists";
+import { TodoList } from "./LIsts/4Lists";
+import { Container } from "./ComponentComposition/2ComponentComposition";
+import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./Context/2Context";
 // import { Hello } from "./4Component";
 
 const items = [
@@ -17,18 +20,38 @@ const items = [
 ]
 
 export class App extends React.Component {
+    state = {
+        language: 'en'
+    }
+
+    handleLanguageChange= (e) => {
+        this.setState({
+            language: e.target.value
+        })
+    }
+    
     render() {
         return (
             <div>
-                <div className="welcome">
-                    <Welcome name="John" age="64" className="welcome"/>
-                </div>
-                <ClickCounter />
-                <InteractiveWelcome />
-                <Login />
-                <UncontrolledLogin />
-                <Colors colors={items}/>
-                <TodoList />
+                <select value={this.state.language} onChange={this.handleLanguageChange}>
+                    <option value="en">ENGLISH</option>
+                    <option value="it">ITALIANO</option>
+                </select>
+               <LanguageContext.Provider value={this.state.language}> 
+                    <DisplayLanguage />
+                </LanguageContext.Provider>
+                    
+                    <Container title="My Awesome APP">
+                        <div className="welcome">
+                            <Welcome name="John" age="64"/>
+                        </div>
+                        <ClickCounter />
+                        <InteractiveWelcome />
+                        <Login />
+                        <UncontrolledLogin />
+                        <Colors colors={items}/>
+                        <TodoList />
+                    </Container>
             </div>
         )
     }

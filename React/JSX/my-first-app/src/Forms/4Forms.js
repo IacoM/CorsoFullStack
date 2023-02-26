@@ -30,8 +30,8 @@ export class Login extends React.Component {
     }
     
     render() {
-        const MyMegaStyle = {
-            backgrounColor: 'red'
+        const LoginStyle = {
+            backgroundColor: this.state.password.length > 8 ? 'green' : 'red',
         }
         
         return <div>
@@ -40,8 +40,8 @@ export class Login extends React.Component {
             <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.handleInputChange}></input>
             <button onClick={this.handleReset}>Reset</button>
             {this.state.username && this.state.password
-                ? <button onClick={this.onLogin}>Login</button>
-                : <button disabled>Login</button>
+                ? <button onClick={this.onLogin} style={LoginStyle}>Login</button>
+                : <button disabled style={LoginStyle}>Login</button>
             }
         </div>
     }

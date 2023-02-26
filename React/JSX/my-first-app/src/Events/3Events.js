@@ -18,12 +18,8 @@ export class ClickCounter extends React.Component {
     }
 
     render() {
-        const MyStyle = {
-            color: '#993420',
-            backgroundColor: 'grey',
-        }
         return <div>
-            <h2 style={MyStyle}>Count: {this.state.count}</h2>
+            <h2 style={{color: '#993420', backgroundColor: 'grey', border: '4px solid yellow'}}>Count: {this.state.count}</h2>
             <ClickTracker handle={this.handleButtonTracker}/>
             <h1 >Last Button Clicked: {this.state.lastButton}</h1>
         </div>
