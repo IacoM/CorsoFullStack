@@ -1,5 +1,5 @@
 import React from "react";
-import { Welcome } from "./ConditionalRendering/5ConditionalRendering";
+// import { Welcome } from "./ConditionalRendering/5ConditionalRendering";
 import { InteractiveWelcome } from "./Forms/1Forms";
 import { Counter } from "./ComponentLifecycle/1ComponentLifecycle";
 import { ClickCounter } from "./Events/3Events";
@@ -11,6 +11,9 @@ import { TodoList } from "./LIsts/6Lists";
 import { Container } from "./ComponentComposition/2ComponentComposition";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./Context/2Context";
+
+import { Welcome } from "./FunctionComponent/1FunctionComponent";
+import { Sum } from "./FunctionComponent/3FunctionComponents";
 // import { Hello } from "./4Component";
 
 const items = [
@@ -50,7 +53,17 @@ export class App extends React.Component {
                         <Login />
                         <UncontrolledLogin />
                         <Colors colors={items}/>
-                        <TodoList />
+                        <TodoList
+                        render={items => {
+                            return {
+
+                            }
+                        }}
+                        > 
+
+                        </TodoList>
+
+                        <Sum numbers={[2, 7, 13, 5]} />
                     </Container>
             </div>
         )
