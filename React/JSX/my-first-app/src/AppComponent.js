@@ -7,14 +7,14 @@ import { ClickTracker } from "./Events/3Events";
 // import { Login} from "./Forms/4Forms";
 import { UncontrolledLogin } from "./Forms/6Forms";
 import { Colors } from "./LIsts/2Lists";
-import { TodoList } from "./LIsts/6Lists";
+import { TodoList } from "./RenderProps/2RenderProps";
 import { Container } from "./ComponentComposition/2ComponentComposition";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./Context/2Context";
 
 import { Welcome } from "./FunctionComponent/1FunctionComponent";
 import { Sum } from "./FunctionComponent/3FunctionComponents";
-import { ClickCounter } from "./useState/1useState";
+import { ClickCounter } from "./useEffects/1useEffects";
 import { Login } from "./useState/2useState";
 // import { Hello } from "./4Component";
 
@@ -24,50 +24,43 @@ const items = [
     {id: 3, name: 'Blue', bought: true},
 ]
 
-export class App extends React.Component {
-    state = {
-        language: 'en'
-    }
-
-    handleLanguageChange= (e) => {
-        this.setState({
-            language: e.target.value
-        })
-    }
+export function App () {
     
-    render() {
-        return (
-            <div>
-                <select value={this.state.language} onChange={this.handleLanguageChange}>
-                    <option value="en">ENGLISH</option>
-                    <option value="it">ITALIANO</option>
-                </select>
-               <LanguageContext.Provider value={this.state.language}> 
-                    <DisplayLanguage />
-                </LanguageContext.Provider>
+    
+    return (
+        <div>
                     
-                    <Container title="My Awesome APP">
-                        <div className="welcome">
-                            <Welcome name="John" age="64"/>
-                        </div>
-                        <ClickCounter initValue={13}/>
-                        <InteractiveWelcome />
-                        <Login />
-                        <UncontrolledLogin />
-                        <Colors colors={items}/>
-                        <TodoList
-                        render={items => {
-                            return {
-
-                            }
+                <Container title="My Awesome APP">
+                    <div className="welcome">
+                        <Welcome name="John" age="64"/>
+                    </div>
+                       <ClickCounter initValue={13}/>
+                    <InteractiveWelcome />
+                    <Login />
+                    <UncontrolledLogin />
+                    <Colors colors={items}/>
+                    <TodoList
+                    > 
+                    {(items) => {
+                            
+                            return (
+                                <div>
+                                <ul>{
+                                    items.map((el) => 
+                                        <li >
+                                            {el} <button onClick={() => this.setState({items: items.filter(x => x !== el)})}>REMOVE</button>
+                                        </li>
+                                )}
+                                </ul>
+                            </div>
+                            )
                         }}
-                        > 
+                    
+                    </TodoList>
 
-                        </TodoList>
-
-                        <Sum numbers={[2, 7, 13, 5]} />
-                    </Container>
-            </div>
-        )
-    }
+                    
+                    <Sum numbers={[2, 7, 13, 5]} />
+                </Container>
+        </div>
+     )
 }
