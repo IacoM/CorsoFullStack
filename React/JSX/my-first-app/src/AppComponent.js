@@ -1,7 +1,7 @@
 import React from "react";
 // import { Welcome } from "./ConditionalRendering/5ConditionalRendering";
 import { InteractiveWelcome } from "./Forms/1Forms";
-import { Counter } from "./ComponentLifecycle/1ComponentLifecycle";
+// import { Counter } from "./ComponentLifecycle/1ComponentLifecycle";
 // import { ClickCounter } from "./Events/3Events";
 import { ClickTracker } from "./Events/3Events";
 // import { Login} from "./Forms/4Forms";
@@ -16,6 +16,7 @@ import { Welcome } from "./FunctionComponent/1FunctionComponent";
 import { Sum } from "./FunctionComponent/3FunctionComponents";
 import { ClickCounter } from "./useEffects/1useEffects";
 import { Login } from "./useState/2useState";
+import { Counter } from "./useEffects/2useEffects";
 // import { Hello } from "./4Component";
 
 const items = [
@@ -34,7 +35,12 @@ export function App () {
                     <div className="welcome">
                         <Welcome name="John" age="64"/>
                     </div>
-                       <ClickCounter initValue={13}/>
+                    
+                    
+                    <ClickCounter initValue={13}>
+
+                    </ClickCounter>
+                    <Counter />
                     <InteractiveWelcome />
                     <Login />
                     <UncontrolledLogin />

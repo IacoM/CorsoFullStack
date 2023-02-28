@@ -3,11 +3,9 @@ import { useEffect, useState } from "react";
 export function ClickCounter({ initValue = 0 }) {
     const [counter, setCounter] = useState(initValue)
 
-    // useEffect(() => {
-    //     onCounterChange((counter) => {
-
-    //     })
-    // }, [counter])
+    useEffect(() => {
+        console.log(`The Count is: ${counter}`)
+    })
     
     function handleIncrement() {
         setCounter(c => c + 1)
@@ -24,4 +22,8 @@ export function ClickCounter({ initValue = 0 }) {
             <button onClick={handleReset}>Reset</button>
         </div>
     )
+}
+
+export function onCounterChange(counter) {
+
 }
