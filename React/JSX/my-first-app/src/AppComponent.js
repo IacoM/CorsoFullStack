@@ -17,6 +17,8 @@ import { Sum } from "./FunctionComponent/3FunctionComponents";
 import { ClickCounter } from "./useEffects/1useEffects";
 import { Login } from "./useState/2useState";
 import { Counter } from "./useEffects/2useEffects";
+import { GithubUser } from "./useEffects/3useEffects";
+import { GithubUserList } from "./useEffects/4useEffects";
 // import { Hello } from "./4Component";
 
 const items = [
@@ -40,7 +42,10 @@ export function App () {
                     <ClickCounter initValue={13}>
 
                     </ClickCounter>
-                    <Counter />
+                    {/* <Counter /> */}
+
+                    <GithubUserList />
+                    
                     <InteractiveWelcome />
                     <Login />
                     <UncontrolledLogin />

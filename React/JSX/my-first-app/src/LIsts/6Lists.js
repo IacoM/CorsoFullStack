@@ -15,8 +15,8 @@ export class TodoList extends React.Component {
                     <li >
                         {el} <button onClick={() => this.setState({items: this.state.items.filter(x => x !== el)})}>REMOVE</button>
                     </li>
-            )}
-                </ul>
+                )
+            }</ul>
             <input name="adder" value={this.state.name} onChange={(e) => this.setState({name: e.target.value})}></input>
             <button type="button" onClick={() => {this.state.items.push(this.state.name); this.setState({name:""})}}>ADD</button>
             <button type="button" onClick={() => this.setState({items: []})}>RESET</button>
