@@ -15,9 +15,9 @@ import { DisplayLanguage } from "./Context/2Context";
 import { Welcome } from "./FunctionComponent/1FunctionComponent";
 import { Sum } from "./FunctionComponent/3FunctionComponents";
 import { ClickCounter } from "./useEffects/1useEffects";
-import { Login } from "./useState/2useState";
-import { Counter } from "./useEffects/2useEffects";
-import { GithubUser } from "./useEffects/3useEffects";
+import { Login } from "./CustomHooks/2CustomHooks";
+import { Counter } from "./CustomHooks/1CustomHooks";
+import { GitHubUser } from "./CustomHooks/3_4CustomHooks";
 import { GithubUserList } from "./useEffects/4useEffects";
 // import { Hello } from "./4Component";
 
@@ -42,12 +42,15 @@ export function App () {
                     <ClickCounter initValue={13}>
 
                     </ClickCounter>
-                    {/* <Counter /> */}
+                    <Counter />
 
+                    <GitHubUser username='IacoM'/>
                     <GithubUserList />
                     
                     <InteractiveWelcome />
+                    
                     <Login />
+                    
                     <UncontrolledLogin />
                     <Colors colors={items}/>
                     <TodoList
