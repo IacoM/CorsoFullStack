@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export function Login() {
     
@@ -7,6 +7,11 @@ export function Login() {
         password: "",
         remember: false,
     })
+    const inputRef = useRef()
+
+    useEffect(() => {
+        inputRef.current.focus()
+    }, [])
 
     function handleInputChange(e) {
         const {name, type, value, checked} = e.target   
@@ -21,7 +26,7 @@ export function Login() {
     
     return (
         <div>
-            <input name="username" placeholder="username" value={data.username} onChange={handleInputChange}></input>
+            <input name="username" placeholder="username" value={data.username} onChange={handleInputChange} ref={inputRef}></input>
             <input name="password" type="password" placeholder="password" value={data.password} onChange={handleInputChange}></input>
             <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputChange}></input>
             {data.username && data.password
