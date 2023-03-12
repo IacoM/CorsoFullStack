@@ -13,7 +13,8 @@ export function GithubUserList() {
       setNewUsername("");
     }
     function handleShowUsers() {
-        navigate("/users")
+        navigate("/:username")
+
     }
     console.log(usernames)
 
@@ -25,9 +26,7 @@ export function GithubUserList() {
           {usernames.map((username) => (
             <li key={username}>
               <div>
-              <Link to=":username">Show Me</Link>
-              {/* <GithubUser username={username} /> */}
-                {/* <button onClick={handleShowUsers}>Show Me</button> */}
+                <GithubUser username={username} />
               </div>
             </li>
           ))}
