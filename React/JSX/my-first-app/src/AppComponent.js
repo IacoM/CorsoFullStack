@@ -27,6 +27,7 @@ import { FilteredList } from "./useMemo";
 import { ShowGithubUser } from "./useEffects/3_2useEffects";
 
 import { Routes, Route, Link } from "react-router-dom";
+import { GitHubUsers } from "./Swr/1Swr";
 
 // import { Hello } from "./4Component";
 
@@ -77,15 +78,17 @@ export function App () {
                             }
                         />
 
-                        <Route path="/users" element={<div className="welcome"><GithubUserList /></div>}>
+                        <Route path="/user" element={<div className="welcome"><GithubUserList /></div>}>
                             <Route index element={<p>Add a user and select it</p>} />
-                            <Route path=":username" element={<ShowGithubUser />} />
+                            <Route path=":username" element={<GitHubUsers />} />
                         </Route>
+
+                        <Route path="/users" element={<div className="welcome"><GitHubUsers /></div>}></Route>
 
                         <Route path="*" element={<p>Not Found</p>} />
 
                     </Routes>
-                    <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="/users">GitHub Users</Link>
+                    <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="/user">GitHub Users</Link> | <Link to="/users">Users</Link>
 
 
                     <Counter />
